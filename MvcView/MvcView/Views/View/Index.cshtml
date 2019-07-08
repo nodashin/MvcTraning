@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using(Html.BeginForm(
+    "Edit",
+    "Result",
+    new {id = "H15A1", charset = "utf8"},            //ルートパラメーター
+    FormMethod.Post,                                 //HTTPメソッド
+    new {id = "rm", enctype = "multipart/form-data"} //その他の属性
+    ))
+{
+    //フォームの内容
+}
+
+@using (Html.BeginRouteForm(
+    "Default",
+    new { controller = "Result", Action = "Edit", id = "H15A1", charset = "utf8" }, //ルートパラメータ
+    FormMethod.Post,                                                                //HTTPメソッド
+    new { id = "rm", enctype = "multipart/form-data" }                              //その他の属性
+    ))
+{
+    //フォームの内容
+}

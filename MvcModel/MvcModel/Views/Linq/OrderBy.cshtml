@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MvcModel.Models.Article>
+
+@{
+    ViewBag.Title = "OrderBy";
+}
+
+<h2>OrderBy</h2>
+
+@using (Html.BeginForm("OrderBy", "Linq", FormMethod.Get, new { @class = "form-inline"}))
+{
+    <input type="submit" value="ソート" class="btn btn-info" />
+}
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Category)</th>
+            <th>@Html.DisplayNameFor(model => model.Published)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@Html.DisplayFor(model => item.Title)</td>
+            <td>@Html.DisplayFor(model => item.Category)</td>
+            <td>@Html.DisplayFor(model => item.Published)</td>
+        </tr>
+        }
+    </tbody>
+</table>

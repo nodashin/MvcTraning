@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "RazorHelper";
+}
+
+<h2>RazorHelper</h2>
+
+@MyApp.Video("~/Content/toy.mp4",
+  new { loop = "loop", width = 300, height = 300 })
+
+@*@Restrict.FailHelper()*@

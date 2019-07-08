@@ -1,0 +1,11 @@
+﻿@model MvcView.Models.Member
+
+@{
+  ViewBag.Title = "RadioList";
+}
+
+<h2>RadioList</h2>
+
+@Html.RadioButtonListFor(model => model.Name,
+  (IEnumerable<SelectListItem>)ViewBag.Names,
+  new { @class = "radio inline" })

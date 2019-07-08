@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Link";
+}
+
+<h2>Link</h2>
+
+@Html.ActionLink(
+  "詳細",
+  "Details",
+  "Result",
+  new { id = "980-NI-05038-8", charset = "utf8" },
+  new { tabindex = 1 }
+)
+
+@Html.ActionLink(
+  "詳細",
+  "Details",
+  "Result",
+  "https",
+  "www.wings.msn.to",
+  "memo",
+  new { id = "980-NI-05038-8" },
+  new { tabindex = 1 }
+)
+
+@Html.RouteLink(
+  "詳細",
+  new { controller = "Result", Action = "Details",
+    id = "980-NI-05038-8", charset = "utf8" },
+  new { tabindex = 1 }
+)
+
+@Url.Content("~/Content/Site.css") <br />
+
+@*<img src="~/Content/hoge.gif" alt="サンプル画像" /> <br />
+<img src="@Url.Content("~/Content/hoge.gif")" alt="サンプル画像" /><br />*@
+
+@Url.Action(
+  "Details",
+  "Result",
+  new { id = "980-NI-05038-8", charset = "utf8" }
+)
+
+@Url.RouteUrl(
+  "Default",
+  new { controller = "Result", Action = "Details",
+    id = "980-NI-05038-8", charset = "utf8" }
+)
+
+@Url.RouteUrl("Default")
+
+
+
+
+

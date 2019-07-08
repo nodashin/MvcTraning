@@ -1,0 +1,14 @@
+﻿@*@using MvcView.Helpers;*@
+
+@{
+    ViewBag.Title = "Custom";
+}
+
+<h2>Custom</h2>
+
+@MyHelper.Mailto("CQW15204@nifty.com", "連絡したい")
+
+@Html.Image("~/Content/wings.jpg", "WINGSプロジェクト")
+
+@Html.Video("~/Content/toy.mp4",
+  new { loop = "loop", width = 300, height = 300 })

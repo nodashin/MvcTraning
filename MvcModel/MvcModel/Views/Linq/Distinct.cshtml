@@ -1,0 +1,17 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewBag.Title = "Distinct";
+}
+
+<h2>Distinct</h2>
+
+<ul>
+    @foreach (var name in Model)
+    {
+        <li>
+            @name
+        </li>
+    }
+</ul>
+

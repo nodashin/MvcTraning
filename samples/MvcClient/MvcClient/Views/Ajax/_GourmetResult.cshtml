@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MvcClient.Models.Restaurant>
+
+<div>検索結果：@ViewBag.Count 件</div>
+
+<table class="table">
+  @foreach (var rest in Model)
+  {
+    <tr>
+      <th>
+        <img src="@rest.Image)" alt="グルメ情報検索サイト ぐるなび" />
+      </th>
+      <td>
+        <h5><a href="@rest.Url">@rest.Name.Replace("<br>", "")</a></h5>
+        <p>@rest.Pr</p>
+      </td>
+    </tr>
+  }
+</table>
+
+

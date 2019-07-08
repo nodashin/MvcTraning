@@ -1,0 +1,61 @@
+﻿@model MvcView.Models.Article
+
+@{
+    ViewBag.Title = "Form";
+}
+
+<h2>Form</h2>
+
+    テキストボックス：
+    @Html.TextBoxFor(
+        model => model.Title,
+        new { @readonly = "readonly", size = 30, maxlength = 40 }
+    ) <br />
+
+    パスワードボックス：
+    @Html.PasswordFor(
+        model => model.Title,
+        new { size = 30, maxlength = 40 }
+    ) <br />
+
+
+    チェックボックス：
+    @Html.CheckBoxFor(
+        model => model.Released,
+        new { tabindex = 1 }
+    ) <br />
+
+    ラジオボタン：
+    <label>
+    @Html.RadioButtonFor(
+      model => model.Title,
+      "jQuery TIPS",
+      new { tabindex = 2 }
+    )
+    jQuery TIPS</label>
+    <label>
+    @Html.RadioButtonFor(
+      model => model.Title,
+      "jQueryリファレンス",
+      new { tabindex = 3 }
+    )
+    jQueryリファレンス</label><br />
+
+    隠しフィールド：
+    @Html.HiddenFor(
+      model => model.Title
+    ) <br />
+        
+    テキストエリア：
+    @Html.TextAreaFor(
+      model => model.Description,
+      5,
+      80,
+      new { @class = "desc" }
+    ) <br />
+
+    テキストボックス（URL）：
+    @Html.TextBoxFor(
+        model => model.Url,
+        new { size = 30, maxlength = 40, type = "url" }        
+    )

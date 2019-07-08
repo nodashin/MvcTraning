@@ -1,0 +1,7 @@
+﻿@using System.Web.Mvc.Html
+
+@helper FailHelper()
+{
+  var Html = ((System.Web.Mvc.WebViewPage)WebPageContext.Current.Page).Html;
+  @Html.TextBox("Hoge")
+}

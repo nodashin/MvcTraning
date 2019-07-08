@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MvcModel.Models.ArticleCommentView>
+@{
+    ViewBag.Title = "SelectMany4";
+}
+
+<h2>SelectMany4</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Body)
+        </td>
+    </tr>
+    }
+</table>

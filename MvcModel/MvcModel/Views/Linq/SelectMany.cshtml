@@ -1,0 +1,16 @@
+﻿@model IEnumerable<IEnumerable<MvcModel.Models.Comment>>
+@{
+    ViewBag.Title = "SelectMany";
+}
+
+<h2>SelectMany</h2>
+
+<ul>
+    @foreach (var cs in Model)
+    {
+        foreach (var c in cs)
+        {
+            <li>@c.Body (@c.Name)</li>
+        }
+    }
+</ul>

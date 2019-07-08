@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using(Html.BeginForm(
+  "Edit",
+  "Result",
+  new { id = "H15A1", charset = "utf8" },
+  FormMethod.Post,
+  new { id="fm", enctype="multipart/form-data" }
+)) {
+
+}
+
+@using(Html.BeginRouteForm(
+  "Default",
+  new { controller = "Result", Action = "Edit" ,
+        id = "H15A1", charset = "utf8"},
+  FormMethod.Post,
+  new { id="fm", enctype="multipart/form-data" }
+)) {
+  
+}

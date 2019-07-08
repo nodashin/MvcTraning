@@ -1,0 +1,20 @@
+﻿@model IEnumerable<IGrouping<MvcModel.Models.CategoryEnum, MvcModel.Models.Article>>
+
+@{
+    ViewBag.Title = "Having2";
+}
+
+<h2>Having2</h2>
+
+<dl>
+    @foreach (var group in Model)
+    {
+        <dt>@group.Key</dt>
+        foreach (var article in group)
+        {
+            <dt>
+                <a href="@article.Url">@article.Title</a>
+            </dt>
+        }
+    }
+</dl>

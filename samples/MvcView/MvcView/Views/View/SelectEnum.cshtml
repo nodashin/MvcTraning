@@ -1,0 +1,17 @@
+﻿@model MvcView.Models.Article
+
+@{
+    ViewBag.Title = "SelectEnum";
+}
+
+<h2>SelectEnum</h2>
+
+    カテゴリー：
+    @Html.EnumDropDownListFor(model => model.Category)
+    <br />
+
+    カテゴリー：
+    @Html.DropDownListFor(
+        model=>model.Category,
+        EnumHelper.GetSelectList(typeof(MvcView.Models.CategoryEnum))
+    )

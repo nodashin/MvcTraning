@@ -1,0 +1,35 @@
+﻿@model IEnumerable< MvcModel.Models.ArticleView>
+
+@{
+    ViewBag.Title = "Select";
+}
+
+<h2>Select</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ViewCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Released)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.ViewCount)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Released)
+        </td>
+    </tr>
+    }
+</table>

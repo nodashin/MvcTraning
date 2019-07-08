@@ -1,0 +1,23 @@
+﻿@model MvcView.Models.Article
+
+@{
+    ViewBag.Title = "Select";
+}
+
+<h2>Select</h2>
+
+    選択ボックス：
+    @Html.DropDownListFor(
+      model => model.Title,
+      (IEnumerable<SelectListItem>)ViewBag.SelectOptions,
+      "選択してください",
+      new { @class = "title_list" }
+    ) <br />
+
+    リストボックス：
+    @Html.ListBoxFor(
+              model => model.Comments,
+        (IEnumerable<SelectListItem>)ViewBag.ListOptions,
+        new { @class = "comment_list" }
+    ) <br />
+

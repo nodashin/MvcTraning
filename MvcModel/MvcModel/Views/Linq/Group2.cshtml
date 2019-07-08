@@ -1,0 +1,20 @@
+﻿@model IEnumerable<IGrouping<MvcModel.Models.CategoryEnum, MvcModel.Models.ArticleLinkView>>
+
+@{
+    ViewBag.Title = "Group2";
+}
+
+<h2>Group2</h2>
+
+<!--グループを列挙-->
+@foreach (var gruop in Model)
+{
+    <dt>@gruop.Key</dt>
+    <dd>
+        <!--グループに属するオブジェクトを列挙-->
+        @foreach (var article in gruop)
+        {
+            <p><a herf="@article.Url">@article.Title</a></p>
+        }
+    </dd>
+}

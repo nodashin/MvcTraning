@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "ResouceGlobal";
+}
+
+<h2>ResouceGlobal</h2>
+
+@*<div>@HttpContext.GetGlobalResourceObject("MyRes", "Greeting")</div>*@
+<div>@Html.GlobalResource("MyRes", "Greeting")</div>
+
+@*<div>@string.Format((string)HttpContext.GetGlobalResourceObject("MyRes", "Today"), DateTime.Now.ToLongDateString())</div>*@
+<div>@Html.GlobalResource("MyRes", "Today", DateTime.Now.ToLongDateString())</div>

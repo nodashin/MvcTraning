@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+@*@{
+    Layout = "~/Views/Shared/_ChildLayout.cshtml";
+}*@
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@*@section scripts {
+  <script>
+    $(function () {
+      $('h3').css('color', 'Red');
+    });
+  </script>
+  }*@
+
+
+@Html.Action("CurrentTime", "Home")
+@*@{ Html.RenderAction("CurrentTime", "Home"); }*@
+
+

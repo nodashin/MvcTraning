@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "ResourceLoacl";
+}
+
+<h2>ResourceLoacl</h2>
+
+@{ var viewPath = ((RazorView)Html.ViewContext.View).ViewPath; }
+
+@*<div>@HttpContext.GetLocalResourceObject(viewPath, "Night")</div>*@
+<div>@Html.LocalResource("Nigth")</div>
+
+@*<div>@string.Format((string)HttpContext.GetLocalResourceObject(viewPath, "Price"), (100).ToString("C"))</div>*@
+<div>@Html.LocalResource("Price", (100).ToString("C"))</div>

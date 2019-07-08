@@ -1,0 +1,128 @@
+﻿@model MvcView.Models.Article
+
+@{
+    ViewBag.Title = "Form";
+}
+
+<h2>Form</h2>
+
+テキストボックス：
+@Html.TextBoxFor(
+    model => model.Title,
+    new { @readonly = "readonly", size = 30, maxlength = 40}
+    )<br />
+
+パスワードボックス：
+@Html.PasswordFor(
+    model => model.Title,
+    new {size = 30, maxlength = 40}
+    )<br />
+
+チェックボックス：
+@Html.CheckBoxFor(
+    model => model.Released,
+    new { tabindex = 1}
+    )<br />
+
+ラジオボタン：
+<label>
+    @Html.RadioButtonFor(
+    model => model.Title,
+    "jQuery TIPS",
+    new { tabindex = 2}
+    )
+    jQuery TIPS
+</label>
+<label>
+    @Html.RadioButtonFor(
+    model => model.Title,
+    "jQuery リファレンス",
+    new { tabindex = 3}
+    )
+    jQuery リファレンス
+</label><br />
+
+隠しフィールド：
+@Html.HiddenFor(
+    model => model.Title
+    )<br />
+
+テキストエリア：
+@Html.TextAreaFor(
+    model => model.Description,
+    5,
+    80,
+    new { @class = "desc" }
+    )<br />
+
+テキストボックス(URL)
+@Html.TextBoxFor(
+    model => model.Url,
+    new {size = 30, maxlength = 40, type = "url"}
+    )<br />
+
+テキストボックス(検索テキスト)
+@Html.TextBoxFor(
+    model => model.Title,
+    new {size = 30, maxlength = 40, type = "search"}
+    )<br />
+
+テキストボックス(メールアドレス)
+@Html.TextBoxFor(
+    model => model.Url,
+    new {size = 30, maxlength = 40, type = "email"}
+    )<br />
+
+テキストボックス(電話番号)
+@Html.TextBoxFor(
+    model => model.Id,
+    new {size = 30, maxlength = 40, type = "tel"}
+    )<br />
+
+テキストボックス(日付)
+@Html.TextBoxFor(
+    model => model.Published,
+    new {size = 30, maxlength = 40, type = "date"}
+    )<br />
+
+テキストボックス(UTC日時)
+@Html.TextBoxFor(
+    model => model.Published,
+    new {size = 30, maxlength = 40, type = "datetime"}
+    )<br />
+
+テキストボックス(ローカル日時)
+@Html.TextBoxFor(
+    model => model.Published,
+    new {size = 30, maxlength = 40, type = "datetime-local"}
+    )<br />
+
+テキストボックス(月)
+@Html.TextBoxFor(
+    model => model.Published,
+    new {size = 30, maxlength = 40, type = "month"}
+    )<br />
+
+テキストボックス(週)
+@Html.TextBoxFor(
+    model => model.Published,
+    new {size = 30, maxlength = 40, type = "week"}
+    )<br />
+
+テキストボックス(月)
+@Html.TextBoxFor(
+    model => model.Published,
+    new {size = 30, maxlength = 40, type = "time"}
+    )<br />
+
+テキストボックス(数値範囲)
+@Html.TextBoxFor(
+    model => model.Viewcount,
+    new {size = 30, maxlength = 40, type = "range"}
+    )<br />
+
+テキストボックス(色)
+@Html.TextBoxFor(
+    model => model.Viewcount,
+    new {size = 30, maxlength = 40, type = "color"}
+    )<br />

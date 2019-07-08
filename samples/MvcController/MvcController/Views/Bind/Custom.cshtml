@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Custom";
+}
+
+<h2>Custom</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.TextBox("date.year", "", new { size = 4 }) @:年
+  @Html.TextBox("date.month", "", new { size = 2 }) @:月
+  @Html.TextBox("date.day", "", new { size = 2 }) @:日
+  <input type="submit" value="送信" />
+}

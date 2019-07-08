@@ -1,0 +1,9 @@
+﻿@helper Video(string src, Object htmlAttrs)
+{
+    <video src="@src" controls="controls"
+           @foreach (var item in System.Web.Mvc.HtmlHelper.AnonymousObjectToHtmlAttributes(htmlAttrs))
+           {
+               <text> @item.Key="@item.Value"</text>
+           }>
+    </video>
+}

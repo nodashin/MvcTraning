@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "FormNotFor";
+}
+
+<h2>FormNotFor</h2>
+
+氏名：
+@Html.TextBox(
+    "name",
+    "ごんざえもん",
+    new { @readonly = "readonly", maxlength = 20})
+

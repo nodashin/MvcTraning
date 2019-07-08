@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MvcController.Models.Member>
+
+@{
+    ViewBag.Title = "CreateList";
+}
+
+<h2>CreateList</h2>
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="登録" />
+    <table class="table">
+        <tr>
+            <th>氏名</th>
+            <th>メールアドレス</th>
+            <th>誕生日</th>
+        </tr>
+        <!--5行の入力用リストを作成-->
+        @for (int i = 0; i < 5; i++)
+        {
+            var key = string.Format("List[{0}].", i);
+        <tr>
+            <td>@Html.Hidden(key + "key", "key" + i.ToString())
+               @Html.TextBox(key + "value.Name")</td>
+            <td>@Html.TextBox(key + "value.Email")</td>
+            <td>@Html.TextBox(key + "value.Birth")</td>
+        </tr>
+        }
+    </table>
+}

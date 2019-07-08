@@ -1,0 +1,10 @@
+﻿@model MvcView.Models.Article
+
+@{
+    ViewBag.Title = "SelectGroup";
+}
+
+<h2>SelectGroup</h2>
+
+@Html.DropDownListFor(model => model.Url,
+  (SelectList)ViewBag.Opts, "選択してください")

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<IGrouping<MvcModel.Models.ArticleGroup, MvcModel.Models.Article>>
+
+@{
+    ViewBag.Title = "MultiGroup";
+}
+
+<h2>MultiGroup</h2>
+
+<dl>
+    @foreach (var group in Model)
+    {
+        <dt>
+            @group.Key.Category (@group.Key.Published)
+        </dt>
+        foreach (var item in group)
+        {
+            <dd>
+                <p><a href="@item.Url">@item.Title</a></p>
+            </dd>
+        }
+    }
+</dl>

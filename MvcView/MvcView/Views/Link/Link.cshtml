@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Link";
+}
+
+<h2>Link</h2>
+
+@Html.ActionLink(
+    "詳細",
+    "Details",
+    "Result",
+    new { id = "980-NI-05038-8", charset = "utf8"},
+    new { tabindex = 1}
+    )
+<br />
+
+@Html.ActionLink(
+    "詳細",
+    "Details",
+    "Result",
+    "https",
+    "www.wings.msn.to",
+    "memo",
+    new { id = "980-NI-05038-8", charset = "utf8" },
+    new { tabindex = 1 }
+    )
+<br />
+
+@Html.RouteLink(
+    "詳細",
+    new { controller = "Result", Action = "Details", id = "980-NI-05038-8", charset = "utf8" },
+    new { tabindex = 1 }
+    )
+<br />
+
+@Url.Content("~/Content/Site.css")
+<br />
+
+@Url.Action(
+    "Details",
+    "Result",
+    new { id = "980-NI-05038-8", charset = "utf8" }
+    )
+<br />
+
+@Url.RouteUrl(
+    "Default",
+    new { controller = "Result", Action = "Details", id = "980-NI-05038-8", charset = "utf8" }
+    )
+<br />
+
+@Url.RouteUrl("Default")
+<br />
